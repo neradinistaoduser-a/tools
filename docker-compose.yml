@@ -41,6 +41,8 @@ services:
       - NEO4J_DBNAME=${NEO4J_DBNAME}
       - NATS_HOSTNAME=${NATS_HOSTNAME}
       - NATS_PORT=${NATS_PORT}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     networks:
       network:
         ipv4_address: 10.5.0.102
@@ -94,6 +96,8 @@ services:
       - NATS_ADDRESS=${NATS_HOSTNAME}:${NATS_PORT}
       - SECRET_KEY=${SECRET_KEY}
       - MERIDIAN_ADDRESS=${MERIDIAN_ADDRESS}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     networks:
       network:
         ipv4_address: 10.5.0.104
