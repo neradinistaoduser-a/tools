@@ -357,8 +357,6 @@ services:
       - SECRET_KEY=${SECRET_KEY}
       - JAEGER_HOST=${JAEGER_HOST}
       - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
-      - JAEGER_HOST=${JAEGER_HOST}
-      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     depends_on:
       meridian_neo4j:
         condition: service_healthy
