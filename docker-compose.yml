@@ -330,6 +330,8 @@ services:
     environment:
       - DB_CONSUL=${DB_CONSUL}
       - DBPORT_CONSUL=${DBPORT_CONSUL}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     networks:
       network:
         ipv4_address: 10.5.0.116
@@ -353,6 +355,8 @@ services:
       - LISTEN_ADDRESS=0.0.0.0:${MERIDIAN_LISTEN_PORT}
       - NATS_ADDRESS=${NATS_HOSTNAME}:${NATS_PORT}
       - SECRET_KEY=${SECRET_KEY}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
       - JAEGER_HOST=${JAEGER_HOST}
       - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     depends_on:
