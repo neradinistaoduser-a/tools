@@ -143,6 +143,8 @@ services:
       - APOLLO_DB_CONSISTENCY=${APOLLO_DB_CONSISTENCY}
       - APOLLO_DB_KEYSPACE=${APOLLO_DB_KEYSPACE}
       - APOLLO_DB_CLUSTER=${APOLLO_DB_CLUSTER}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_GRPC_PORT=${JAEGER_GRPC_PORT}
     networks:
       network:
         ipv4_address: 10.5.0.106
