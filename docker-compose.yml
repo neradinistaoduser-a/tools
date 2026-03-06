@@ -120,6 +120,7 @@ services:
     environment:
       GRPC_PORT: ${AGENT_QUEUE_PORT}
       NATS_CONN_ADDRESS: ${NATS_HOSTNAME}:${NATS_PORT}
+      JAEGER_ADDRESS: ${JAEGER_HOST}:${JAEGER_GRPC_PORT}
       SECRET_KEY: ${SECRET_KEY}
     depends_on:
       - nats
@@ -516,8 +517,7 @@ services:
       - COLLECTOR_OTLP_HTTP_ENABLED=true
     ports:
       - "16686:16686"
-      - "${JAEGER_GRPC_PORT}:${JAEGER_GRPC_PORT}"  
-      - "${JAEGER_HTTP_PORT}:${JAEGER_HTTP_PORT}"  
+      - "${JAEGER_GRPC_PORT}:${JAEGER_GRPC_PORT}"   
     networks:
       network:
         ipv4_address: 10.5.0.200
